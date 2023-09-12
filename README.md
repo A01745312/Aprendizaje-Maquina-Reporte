@@ -1,4 +1,4 @@
-# Uso de framework o biblioteca de aprendizaje máquina para la implementación de una solución. 
+# Análisis y Reporte sobre el desempeño del modelo
 
 - Programa uno de los algoritmos vistos en el módulo (o que tu profesor de módulo autorice) haciendo uso de una biblioteca o framework de aprendizaje máquina. Lo que se busca es que demuestres tu conocimiento sobre el framework y como configurar el algoritmo. 
 - Prueba tu implementación con un set de datos y realiza algunas predicciones. Las predicciones las puedes correr en consola o las puedes implementar con una interfaz gráfica apoyándote en los visto en otros módulos.
