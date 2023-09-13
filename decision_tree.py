@@ -7,6 +7,7 @@
 
 # Importar librerias
 import matplotlib.pyplot as plt
+from matplotlib_venn import venn3 as venn
 import numpy as np
 import seaborn as sns
 from sklearn.datasets import load_wine
@@ -126,6 +127,16 @@ def dataset_parts(x_train, x_test, x_val, y_train, y_test, y_val):
     print(f'Número de muestras en el Conjunto de Validación: {len(x_val)}')
     print(f'X_val:\n{x_val}\n')
     print(f'y_val:\n{y_val}\n')
+    
+     # Crear un diagrama de Venn para mostrar la división de datos
+    plt.figure(figsize=(8, 6))
+    venn_diagram = venn(subsets=(len(x_train), len(x_test), len(x_val), 
+                                  0, 0, 0, 
+                                  0),
+                         set_labels=('Entrenamiento', 'Prueba', 'Validación'))
+    plt.title('División de Datos entre Conjuntos de Entrenamiento, Prueba y Validación')
+    plt.show()
+    
     
 def learning_rate(clf, x_train, y_train, x_test, y_test, x_val, y_val):
     # Crea una gráfica mostrando la curva de aprendizaje entre los datos de entrenamiento y prueba
